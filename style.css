@@ -1,0 +1,114 @@
+:root {
+  --squares-per-side: 16;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  color: white;
+  background-image: url(https://www.beingrepublic.com/wp-content/uploads/2018/02/How-to-remove-Holi-colours-Being-Republic-1.jpg);
+  margin: 0px;
+}
+
+h1 {
+  font-family: "Rock Salt", cursive;
+  font-size: 2.5em;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+  text-shadow: 0px 3px 10px rgba(0, 0, 0, 1);
+}
+
+main {
+  flex: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px 0px 5px;
+  background-color: #323238;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.8);
+}
+
+button {
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+  font-size: 1.1em;
+  margin: 2px;
+  padding: 5px 10px;
+  transition: 0.5s;
+  box-shadow: 0px 3px 15px rgba(100, 100, 100, 0.2);
+}
+
+button:hover {
+  background-color: white;
+  color: #323232;
+  transition: 0.5s;
+  box-shadow: 0px 3px 15px rgba(100, 100, 100, 0.4);
+  position: relative;
+  top: -1px;
+}
+
+#brush-black:hover {
+  background-color: black;
+  color: white;
+}
+
+#brush-colorful:hover {
+  background-image: linear-gradient(
+    to right bottom,
+    #d16b8a,
+    #dd7882,
+    #e5887d,
+    #e9997a,
+    #eaaa7c,
+    #e6b275,
+    #debb70,
+    #d3c46e,
+    #bcc862,
+    #9ccc5d,
+    #72d061,
+    #15d36f
+  );
+  color: white;
+  background-color: transparent;
+}
+
+.sketch-pad-container {
+  height: 585px;
+  width: 585px;
+  background-color: white;
+   opacity: 0.9;
+  border: 5px solid var(--main-color);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.8);
+}
+
+.sketch-pad {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(var(--squares-per-side), 1fr);
+  grid-template-rows: repeat(var(--squares-per-side), 1fr);
+}
+
+.square {
+  border: 1px solid #323232;
+}
+
+footer {
+  width: 100%;
+  background-color: #323232;
+  color: white;
+  opacity: 0.75;
+  margin-top: 20px;
+}
+
+footer > p {
+  float: left;
+  margin-left: 20px;
+}
